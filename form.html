@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Form in HTML</title>
+	<style>
+	.sub{
+		border: 2px solid black;
+		background-color: #00FF00;
+		transition: 0.5s;
+		border-radius: 20px;
+	}
+	.sub:hover{
+		background-color: #000000;
+		color: #00FF00;
+		transition: 0.5s;
+	}
+
+	form{
+		border: 2px solid;
+		width: 30%;
+		padding: 10px;	
+}
+</style>
+</head>
+<body>
+	<center>	
+<h1>Form in HTML</h1>
+	
+	<form action="#" method="get">
+	<b>
+	<label> First Name : </label>
+	<input type="text" name="fn" placeholder="Dev" required>
+ 	<br><br>
+	<label> Last Name : </label>
+	<input type="text" name="ln" placeholder="Patel" required>
+ 	<br><br>
+	<label> Email Id : </label>
+	<input type="email" name="em" placeholder="devpatel@gmail.com" required>
+	<br><br>
+	<label> Password : </label>
+	<input type="password" name="ps" required>
+	<br><br>
+	<label> Number : </label>
+	<input type="number" name="num" required placeholder="9877XXXXXX">
+	<br><br>
+	<label> Gender : </label>
+	<input type="radio" name="gender" value="male" checked>Male
+	<input type="radio" name="gender" value="female">Female
+	<br><br>
+	<label> Intersted Subject : </label>
+	<input type="checkbox" name="s" value="EG"> EG
+	<input type="checkbox" name="s" value="PHYSICS"> PHYSICS 
+	<input type="checkbox" name="s" value="MATHS"> MATHS
+	<br><br>
+	<label> Address : </label>
+	<textarea cols=40 rows=5 name="ad"></textarea> 
+	<br><br>
+	<input type="submit" class="sub" value="SUBMIT">
+	<input type="reset" class="sub" value="RESET">
+	</b>
+	</form>
+	</center>
+	</body>
+</html>
