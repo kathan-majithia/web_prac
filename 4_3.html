@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<title>Z-Index</title>
+<style>
+  .container div{
+    height: 100px;
+    width: 100px;  
+  }
+  .box1{
+    background-color: rgb(150, 201, 201);
+    position: absolute;
+    opacity: 0.8;
+    color: black;
+    z-index: 5;
+  }
+  .box2{
+    background-color: rgb(165, 103, 223);
+    opacity: 0.8;
+    z-index: -1;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+  }
+  .box3{
+    background-color: chocolate;
+    opacity: 1;
+    z-index: -5;
+    position: absolute;
+    top: 120px;
+    left: 40px;
+  }
+  .box5{
+    background-color: blueviolet;
+    opacity: 0.8;
+    z-index: 5;
+    position: absolute;
+    top: 60px;
+    left: 450px;
+  }
+  .box4{
+    background-color: chocolate;
+    opacity: 1;
+    z-index: -5;
+    position: absolute;
+    top: 120px;
+    left: 420px;
+  }
+  .box6{
+    background-color: aqua;
+    position: absolute;
+    opacity: 0.8;
+    color: black;
+    z-index: 1;
+    left: 400px;
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1">Z index 5</div>
+    <div class="box2">Z index -1</div>
+    <div class="box3">Z index -5</div>
+    <div class="box4">Z index -5</div>
+    <div class="box5">Z index 5</div>
+    <div class="box6">Z index 1</div>
+  </div>
+</body>
+</html>
