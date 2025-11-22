@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>Box shadow, Transform and Gradient</title>
+		<style>
+
+body {
+  background: linear-gradient(45deg, #49d49d 10%, #a2c7e5 90%);
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.shadow-box,
+.transform-box {
+  justify-content: center;
+  display: flex;
+}
+.shadow,
+.transformation {
+  border: 1px solid #000;
+  flex-direction: column;
+}
+.boxes {
+  margin: 20px;
+  height: 100px;
+  width: 100px;
+  background-color: #8cdcfc;
+  border: 1px solid #000;
+}
+.box1 {
+  background-color: #8cdcfc;
+  box-shadow: -10px -10px 10px 2px black;
+}
+.box2 {
+  background-color: #daff95;
+  box-shadow: inset -10px -10px 10px 2px black;
+}
+.box3{
+  background-color: #f9c6c6;
+  box-shadow: -5px -5px 5px 2px black, -10px -10px 10px 10px red;
+}
+.tb1{ writing-mode: vertical-lr;}
+.tb2{ writing-mode: horizontal-tb;}
+.tb3{transform: rotate(45deg);}
+.tb4{transform: skew(15deg,25deg);}
+.tb5{transform: translate(20px,20px);}
+.tb6{transform: scale(1.5);}
+.tb7{transform: matrix(1,1.8,1.8,0,20,20);}
+.gl{ background: linear-gradient(to bottom right,red,yellow);}
+.gr{ background: radial-gradient(red,yellow,orange); }
+.gc{ background: conic-gradient(red,yellow);}
+</style>
+	</head>
+	<body><div class="container">
+<div class="shadow flex">
+<h1>Shadow</h1>
+<div class="shadow-box">
+<div class="box1 boxes">Outset Kathan</div>
+<div class="box2 boxes">Inset Kathan</div>
+<div class="box3 boxes">Multiple Kathan</div>
+</div>
+</div>
+<div class="transformation flex">
+<h1>Transformation & Orientation</h1>
+<div class="transform-box">
+<div class="boxes tb1">
+<h3>Vertical LR Kathan</h3>
+</div>
+<div class="boxes tb2">
+<h3>Horizontal TB Kathan</h3>
+</div>
+<div class="boxes tb3">
+<h3>Rotate Kathan</h3>
+</div>
+<div class="boxes tb4">
+<h3>Skew Kathan</h3>
+</div>
+<div class="boxes tb5">
+<h3>Translate Kathan</h3>
+</div>
+<div class="boxes tb6">
+<h3>Scale Kathan</h3>
+</div>
+<div class="boxes tb7">
+<h3>Multiple Kathan</h3>
+</div>
+</div>
+</div>
+<div class="transformation">
+<center>
+<h1>Gradient</h1>
+</center>
+<div class="transform-box">
+<div class="boxes gl">
+<h3>Linear Kathan</h3>
+</div>
+<div class="boxes gr">
+<h3>Radial Kathan</h3>
+</div>
+<div class="boxes gc">
+<h3>Conical Kathan</h3>
+</div>
+</div>
+</body>
+</html>
