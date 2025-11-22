@@ -1,0 +1,114 @@
+<html>
+<head>
+	<title>Advance Form in HTML</title>
+	<style>
+    body{
+        margin:0;
+        padding: 0;
+    }
+	.header{
+		display: flex;
+		align-items: center; 
+      	justify-content: space-between; 
+		margin-left: 200px;
+		margin-right: 200px;
+      	padding: 10px 50px; 
+	}
+	img{
+		width: 70px;
+	}
+    .container{
+        width: 80%;
+        margin: 5px auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #88c0f1;
+    }
+    .container h2{
+        text-align: center;
+        color: #2e3440;
+		padding-top: 20px;
+		font-size: 30px;
+        font-family: monospace;
+    }
+    label{
+        font-weight: bold;
+        color:rgb(61, 44, 44);
+        display:block;
+    }
+    input,select{
+        width: 100%; 
+        padding: 5px; 
+        margin-top: 5px; 
+        border-radius: 5px;
+        background-color: #d3e4f0; 
+        color: #4a3a2a;
+    }
+	.sub{
+		width: 45%;
+		color: #88c0f1;
+		background-color: #000000;
+		transition: 0.5s;
+		border-radius: 20px;
+	}
+	form{
+		width: 30%;
+		padding: 10px;	
+	}
+</style>
+</head>
+<body>
+	<div class="header">
+	<img src="https://files.prokerala.com/education/imgs/logo/thumbnail/medium/the-charutar-vidya-mandal-cvm-university-829.jpg">
+	<h1>G H Patel College of Engineering and Technology</h1>
+	<img src="https://tse1.mm.bing.net/th/id/OIP.sX3A-fkH76iDBMjoVnC_2wAAAA?r=0&cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3">
+</div>
+	<div class="container">
+<h2>Interview details</h2>
+	
+	<form action="#" method="get">
+	<br>
+	<label> Full Name : </label>
+	<input type="text" name="fn" placeholder="Stan" required>
+ 	<br><br>
+	<label> Email Id : </label>
+	<input type="email" name="em" placeholder="stanlee@gmail.com" required>
+	<br><br>
+	<label> Number : </label>
+	<input type="number" name="num" required placeholder="9877XXXXXX">
+	<br><br>
+	<label> Select your branch : </label>
+	<select name="br">
+		<option value="CE">CE</option>
+		<option value="MC" selected>MC</option>
+		<option value="CH">CH</option>
+		<option value="IT">IT</option>
+</select>
+<br><br>
+	<label> Select your domain : </label>
+	<select multiple class="op" name="dom">
+		<option value="web">Web</option>
+		<option value="aiml" selected>AIML</option>
+		<option value=".net">.Net</option>
+		<option value="cyber">Cyber</option>
+		<option value="IoT">IoT</option>
+</select>
+	<br><br>
+	<label> Select DOB </label>
+	<input type="date" required name="dob">
+	<br><br>
+	<label> Upload your id : </label>
+	<input type="file" required name="file" accept="image/*">
+	<br><br>
+	<label> Upload your resume : </label>
+	<input type="file" required name="file" accept="application/pdf">
+	<br><br>
+	<input type="submit" class="sub" value="SUBMIT">
+	<input type="reset" class="sub" value="RESET">
+	</br>
+	</form>
+
+    </div>
+	</body>
+</html>
