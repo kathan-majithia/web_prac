@@ -1,0 +1,89 @@
+<!-- 
+Practical 5.2
+First name, last name, gender,address,mobile,email,fav sub and print in table in next column 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 5.2</title>
+    <style>
+        div{
+            font-weight: bold;
+            margin: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+            <h1>DOM Manipulation</h1>
+            
+	<form method="get">
+	<b>
+	<label> First Name : </label>
+	<input type="text" name="fn" placeholder="Stan" required>
+ 	<br><br>
+	<label> Last Name : </label>
+	<input type="text" name="ln" placeholder="lee" required>
+ 	<br><br>
+	<label> Email Id : </label>
+	<input type="email" name="em" placeholder="stanlee@gmail.com" required>
+	<br><br>
+	<label> Number : </label>
+	<input type="number" name="num" required placeholder="9877XXXXXX">
+	<br><br>
+	<label> Gender : </label>
+	<input type="radio" name="gender" value="male" checked>Male
+	<input type="radio" name="gender" value="female">Female
+	<br><br>
+	<label> Intersted Subject : </label>
+	<input type="checkbox" name="s" value="EG"> EG
+	<input type="checkbox" name="s" value="PHYSICS"> PHYSICS 
+	<input type="checkbox" name="s" value="MATHS"> MATHS
+	<br><br>
+	<label> Address : </label>
+	<textarea cols=40 rows=5 name="ad"></textarea> 
+	<br><br>
+	<input type="submit" onclick="fill()" class="sub" value="SUBMIT">
+	<input type="reset" class="sub" value="RESET">
+	</b>
+</td>
+</form>
+    <td>
+        <h1>Form Details</h1>
+    <div id="fn">First Name : </div>
+    <div id="ln">Last Name : </div>
+    <div id="em">Email : </div>
+    <div id="num">Number : </div>
+    <div id="gen">Gender : </div>
+    <div id="is">Intersted Subjects : </div>
+    <div id="add">Address : </div>
+</td>        
+</tr>
+    </table>
+    <script>
+
+        function fill(){
+            document.getElementById("fn").innerHTML += document.getElementsByName("fn")[0].value;
+            document.getElementById("ln").innerHTML += document.getElementsByName("ln")[0].value;
+            document.getElementById("em").innerHTML += document.getElementsByName("em")[0].value;
+            document.getElementById("num").innerHTML += document.getElementsByName("num")[0].value;
+            document.getElementById("gen").innerHTML += document.getElementsByName("gender")[0].value;
+            var sub = ""
+            var subList = document.getElementsByName("s");
+            for(var i=0; i<subList.length; i++){
+                if(subList[i].checked){
+                    sub += subList[i].value + " ";
+                }
+            }
+            document.getElementById("is").innerHTML += sub;
+            document.getElementById("add").innerHTML += document.getElementsByName("ad")[0].value;
+
+        }
+    </script>
+</body>
+</html>
