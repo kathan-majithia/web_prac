@@ -1,0 +1,90 @@
+<!-- 
+Practical 5.2
+First name, last name, gender,address,mobile,email,fav sub and print in table in next column 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 5</title>
+    <script>
+        let count = 0
+    </script>
+</head>
+<body>
+    <h1>All messages have value : Kathan Majithia</h1>
+    <div>
+        <button id="fi" onclick="aler()">Alert and Prompt</button><br><br>
+        <button onclick="ca()">Char At</button> <span id="ca">Kathan Majithia</span><br><br>
+        <button onclick="len()">Length</button> <span id="len">Hello</span><br><br>
+        <button onclick="ew()">Ends with</button> <span id="ew">Hello</span><br><br>
+        <button onclick="sw()">Starts with</button> <span id="sw">Hello</span><br><br>
+        <button onclick="ino()">Index of</button> <span id="ino">Hello</span><br><br>
+        <button onclick="lio()">Last index of</button> <span id="lio">Hello</span><br><br>
+        <button onclick="mat()">Match</button> <span id="mat">Hello</span><br><br>
+        <button onclick="lo()">Lowercase : </button> <span id="lo">Hello</span><br><br>
+        <button onclick="up()">Uppercase : </button> <span id="up">Hello</span><br><br>
+        <button onclick="subs()">Substring : </button> <span id="subs">Hello</span><br><br>
+        <button onclick="loo()">Print all values of buttons  </button> <br><span id="loo">Hello</span><br><br>
+    </div>
+    <script>
+        msg = ["First","Second","Third","Fourth"]
+        function aler(){
+            if(count == 4){
+                alert("You pressed 5 times")
+                let con = prompt("Enter your name to hide the button.")
+                if(con == null){
+                    document.getElementById("fi").innerHTML = "Not hidden"
+                }else{
+                    console.log("Hello ", con)
+                    document.getElementById("fi").style.display = 'none'
+                }
+            }else{
+                console.log(msg[count++] + " message.")
+            }
+        }
+        
+        let msgi = "Kathan Majithia"
+        function ca(){
+            document.getElementById("ca").innerHTML = "Char at 4 is : " + msgi.charAt(4)
+        }
+        function len(){
+            document.getElementById("len").innerHTML = "Length is : " + msgi.length
+        }
+        function ew(){
+             document.getElementById("ew").innerHTML = "Ends with hia : " + msgi.endsWith("hia")
+        }
+        function sw(){
+             document.getElementById("sw").innerHTML = "Ends with kat : " + msgi.startsWith("kat")
+        }
+        function ino(){
+             document.getElementById("ino").innerHTML = "Index of t : " + msgi.indexOf('t')
+        }
+        function lio(){
+             document.getElementById("lio").innerHTML = "Last index of t : " + msgi.lastIndexOf('t')
+        }
+        function mat(){
+             document.getElementById("mat").innerHTML = "Pattern (han) : " + msgi.match('han')
+        }
+        function lo(){
+             document.getElementById("lo").innerHTML = "Lower case : " + msgi.toLowerCase()
+        }
+        function up(){
+             document.getElementById("up").innerHTML = "Upper case : " + msgi.toUpperCase()
+        }
+        function subs(){
+             document.getElementById("subs").innerHTML = "Substring (han) : " + msgi.substring("han")
+        }
+        function loo(){
+            var but = document.getElementsByTagName("button")
+            val = ""
+            for(i=0;i<but.length;i++){
+                val += but[i].innerText + ","
+            }
+            document.getElementById("loo").innerHTML = val
+        }
+    </script>
+</body>
+</html>
