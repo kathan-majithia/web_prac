@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Practical 6.2</title>
+	<style>
+		.er {
+      color: red;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+</style>
+</head>
+<body>
+	<h2>Regular Expression Validation</h2>
+	<form id="for">
+          <label>Email :</label>
+          <input type="text" id="em" placeholder="Enter email">
+          <span id="emerror" class="er"></span>
+          <br>
+          <label>Password :</label>
+          <input type="password" id="pass" placeholder="Enter Password">
+          <span id="paerror" class="er"></span>
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+        <script>
+        	const form = document.getElementById("for")
+        	const em = document.getElementById("em")
+        	const pass = document.getElementById("pass")
+
+        	em.addEventListener("blur",()=>{
+        		// let valid = true
+        		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+        		if(!regex.test(em.value)){
+        			document.getElementById("emerror").innerText = "Invalid email"
+        		}
+        		else{
+        			document.getElementById("emerror").innerText = ""
+        		}
+        	})
+
+        	pass.addEventListener("blur",()=>{
+        		// let valid = true
+        		const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+
+
+        		if(!regex.test(pass.value)){
+        			document.getElementById("paerror").innerText = "Password must be min of 8 with upper, lower, number & special symbol."
+        		}
+        		else{
+        			document.getElementById("paerror").innerText = ""
+        		}
+        	})
+        </script>
+</body>
+</html>
