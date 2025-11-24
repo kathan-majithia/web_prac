@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Practical 6.1</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>Event</th>
+			<th>Input</th>
+			<th>Output</th>
+		</tr>
+		<tr>
+			<th>onBlur</th>
+			<td><input type="text" id="inp"></td>
+			<td id="ob"></td>
+		</tr>
+		<tr>
+			<th>onChange</th>
+			<td><select id="sel">
+				<option value="Web">WEB</option>
+				<option value="Daa">DAA</option>
+				<option value="Python">Python</option>
+			</select></td>
+			<td id="oc"></td>
+		</tr>
+		<tr>
+			<th>onClick</th>
+			<td><button id="but">Click me</button></td>
+			<td id="ocl"></td>
+		</tr>
+		<tr>
+			<th>Key Event</th>
+			<td><input type="text" id="key"></td>
+			<td id="onk"></td>
+		</tr>
+		<tr>
+			<th>Mouse Event</th>
+			<td height="100px" id="mou"></td>
+			<td id="onm"></td>
+		</tr>
+	</table>
+	<script>
+		const blur = document.getElementById("inp")
+		const change = document.getElementById("sel")
+		const but = document.getElementById("but")
+		const key = document.getElementById("key")
+		const mou = document.getElementById("mou")
+
+		blur.addEventListener("blur", ()=>{
+			document.getElementById("ob").innerText = "Blur event"
+		})
+
+		change.addEventListener("change",()=>{
+			document.getElementById("oc").innerText = change.value
+		})
+
+		var count = 0
+		but.addEventListener("click",()=>{
+			document.getElementById("ocl").innerText = ++count
+		})
+
+		key.addEventListener("keypress",(e)=>{
+			document.getElementById("onk").innerText = e.key
+		})
+
+		mou.addEventListener("mousemove",(e)=>{
+			document.getElementById("onm").innerText = "X = "+ e.offsetX + ", Y = " + e.offsetY
+		})
+	</script>	
+</body>
+</html>
